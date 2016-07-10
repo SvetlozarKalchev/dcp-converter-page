@@ -1,0 +1,39 @@
+// out: ../main.css, compress: true, sourcemap: false
+
+// CSS reset
+@import "normalize"
+
+// Global color definitions
+dark_yellow = rgb(249, 200, 30)
+light_grey = #FAFAFA
+blackish = #2C3142
+grey_blue = #858A99
+
+// Some basic element styles
+*
+    box-sizing border-box
+body
+    width 100vw
+    height 100vh
+    box-sizing border-box
+    overflow-x hidden
+
+.container
+    width 100vw
+    height 100vh
+    font-family: 'Roboto', sans-serif;
+    background-color light_grey
+
+// Mixin that allows cross-browser vertical centering of any element
+center_vertically()
+    position relative
+    top 50%
+    -webkit-transform translateY(-50%)
+    -ms-transform translateY(-50%)
+    transform translateY(-50%)
+
+// Styles for each separate section of the page
+@import "fixed-menu"
+@import "header"
+@import "features"
+@import "footer"

@@ -1,0 +1,77 @@
+// main: _main.styl
+
+nav_width = 100vw
+nav_height = 60px
+menu_item_width = 120px
+menu_color = dark_yellow//#000
+
+nav
+    position fixed
+    width nav_width
+    height nav_height
+    line-height nav_height
+    background-color menu_color
+    font-family: 'Lato', sans-serif;
+    font-size 20px
+    z-index 1000
+    .site-logo
+        width nav_height - 10px
+        height nav_height - 10px
+        float left
+        margin-top 10px
+        margin-left 20px
+    .menu-container
+        width auto
+        height nav_height
+        float left
+        margin-left 45%
+    .menu-item
+        display inline-block
+        width menu_item_width
+        height nav_height
+        margin-right 10px
+        color white
+        font-weight bold
+        overflow hidden
+        text-align center
+    .menu-item:hover
+        background-color #fff
+        color black
+    .menu-icon
+        width nav_height + 10px
+        height nav_height
+        position absolute
+        right 0
+        display none
+
+
+// The menu is fixed, so I've added an empty element that pushes down
+// the rest of the content
+.spacing
+    height nav_height
+
+.selected
+    border-bottom 2px solid #fff
+
+// Responsive styles
+@media(max-width: 900px)
+    nav
+        .menu-container
+            margin-left 0
+            width 100vw
+            height auto
+            background-color menu_color
+            display none
+        .menu-item
+            display block
+            margin 0 auto
+            min-width 200px
+        .menu-icon
+            display inline-block
+
+// This is needed, so that the menu can switch between mobile and desktop
+// version when resizing the viewport
+@media(min-width: 900px)
+    nav
+        .menu-container
+            display inline-block
