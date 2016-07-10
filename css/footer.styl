@@ -1,6 +1,50 @@
 // main: _main.styl
 
 .footer
+    position relative
     width 100vw
-    height 500px
-    background-color blackish
+    min-height 600px
+    background-color blue
+    font-family: 'Lato', sans-serif;
+    color white
+    padding-top 30px
+    .content
+        width 50%
+        margin 0 auto
+        text-align center
+        font-size 25px
+        h2
+            font-size 40px
+            margin-bottom 150px
+        .purchase
+            width 100%
+
+            img
+                width 200px
+                height 120px
+                float left
+            p
+                // text-align justify
+    .copyright
+        overflow hidden
+        margin-top 100px
+        height 60px
+        line-height 30px
+        background-color light_blue
+        padding 10px
+        width 100%
+        position absolute
+        bottom 0
+        font-family: 'NTR', sans-serif;
+        p
+            display inline-block
+        .social-icons
+            float right
+            margin-right 50px
+            img
+                transition all .2s ease-in-out
+                margin-right 20px
+                width 40px
+                height 40px
+            img:hover
+                transform scale(1.2)

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <base href="/" target="_blank" />
+  <base href="/" target="_self" />
 
   <title>DCP Converter</title>
 
@@ -24,11 +24,21 @@
       <!-- Top navigation -->
       <nav>
         <img class="site-logo" src="img/logo.png" alt="">
+
          <div class="menu-container">
-           <div class="menu-item selected">Home</div>
-           <div class="menu-item">Features</div>
-           <div class="menu-item">Purchase</div>
+           <a href="#home">
+             <div class="menu-item selected">Home</div>
+           </a>
+
+           <a href="#features">
+             <div class="menu-item">Features</div>
+           </a>
+
+           <a href="#purchase">
+             <div class="menu-item">Purchase</div>
+           </a>
          </div>
+
          <img class="menu-icon" src="./img/menu.gif" alt="">
      </nav>
      <!--  -->
@@ -36,7 +46,7 @@
     <div class="spacing"></div>
 
      <!-- Header -->
-     <div class="header">
+     <div id="home" class="header">
 
        <div class="img-container">
          <img src="/img/screen.png" alt="">
@@ -51,7 +61,7 @@
      <!--  -->
 
      <!-- Features list  -->
-    <div class="features">
+    <div id="features" class="features">
 
       <div class="info">
         <h2>Features List</h2>
@@ -101,13 +111,35 @@
     <!-- Feature END -->
 
     <!-- Footer  -->
-    <div class="footer">
-    
+    <div id="purchase" class="footer">
+      <div class="content">
+        <h2>Enough looking...</h2>
+
+        <div class="purchase">
+          <img src="img/paypal.png" alt="">
+          <h3>Purchase now for 59EUR </h3>
+          <p>Free lifetime updates.</p>
+        </div>
+      </div>
+
+      <div class="copyright">
+
+        <p>
+          &copy Copyright 2016. Stephan Klemmer - All rights reserved
+        </p>
+
+        <div class="social-icons">
+          <a href="#"><img src="/img/facebook.png" alt=""></a>
+          <a href="#"><img src="/img/twitter.png" alt=""></a>
+        </div>
+      </div>
     </div>
 
   </div>
 
 </body>
+
+
 
 <!-- Script for opening and closing the menu -->
 <script type="text/javascript">
