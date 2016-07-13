@@ -145,9 +145,21 @@
 <script type="text/javascript">
   var menu = document.getElementsByClassName('menu-icon')[0],
     menuContents = document.getElementsByClassName('menu-container')[0],
+    menuItems = document.getElementsByClassName('menu-item'),
     isMenuClosed = true;
 
   menu.addEventListener('click', function toggle(event) {
+    toggleMenu();
+  });
+
+  // Close the menu after selecting a menu item
+  for(var i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener('click', function closeMenu() {
+      toggleMenu();
+    })
+  }
+
+  function toggleMenu() {
     if(isMenuClosed) {
       menuContents.style.display = "inline-block";
       isMenuClosed = false
@@ -155,8 +167,7 @@
       menuContents.style.display = "none";
       isMenuClosed = true;
     }
-  });
-
+  }
 </script>
 
 </html>

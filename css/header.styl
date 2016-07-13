@@ -1,7 +1,7 @@
 // main: _main.styl
 
 min_height = 200px
-max_height = 700px
+max_height = 800px
 
 bg_color = rgb(249, 200, 30)
 
@@ -10,36 +10,51 @@ bg_color = rgb(249, 200, 30)
     min-height min_height
     max-height max_height
     position relative
-    overflow hidden
-    background-color bg_color
+    // overflow hidden
+    background-color light_blue//bg_color
     padding-top 50px
     padding-left 50px
     padding-right 50px
+    padding-bottom 100px
+    text-align center
     div
-        display inline-block
+        // display inline-block
     .img-container
         min-width min_height
         min-height min_height
-        max-width max_height
-        max-height max_height
-        float left
+        max-width max_height - 100px
+        max-height max_height - 100px
+        position relative
+        margin 0 auto
         img
             width 100%
             height 100%
 
     .text
         position relative
-        float left
+        bottom 25px
+        margin 0 auto
+        text-align center
         min-width 200px
-        width 500px
-        min-height 300px
+        max-width 500px
+        min-height 150px
         color white
         font-weight bold
         font-family: 'Lato', sans-serif;
-        margin-top 150px
-        margin-left 150px
         h1
-            font-size 40px
+            font-size 36px
         p
             font-size 22px
             font-weight lighter
+
+
+// Decrease font-size a bit in the mobile version
+@media (max-width: 950px)
+    .header
+        padding-bottom 0px
+        .text
+            bottom 10px
+            h1
+                font-size 28px
+            p
+                font-size 19px
