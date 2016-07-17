@@ -110,30 +110,61 @@
     </div>
     <!-- Feature END -->
 
-    <!-- Footer  -->
-    <div id="purchase" class="footer">
+    <!-- Buy now  -->
+    <div id="purchase" class="purchase">
       <div class="content">
         <h2>Enough looking...</h2>
 
-        <div class="purchase">
-          <img src="img/paypal.png" alt="">
-          <h3>Purchase now for 59EUR </h3>
-          <p>Free lifetime updates.</p>
+        <div class="screenshot">
+          <img src="/img/screen2.png" alt="">
+        </div>
+
+        <div class="buy">
+          <h3>Purchase now for only 59,- € </h3>
+          <ul>
+            <li>Free lifetime updates.</li>
+            <li>1 license</li>
+            <li>Full support for 2D and 3D-DCP</li>
+            <li>Maximum quality</li>
+          </ul>
+          <img src="img/buy_now.png" alt="">
         </div>
       </div>
 
-      <div class="copyright">
 
-        <p>
-          &copy Copyright 2016. Stephan Klemmer - All rights reserved
-        </p>
+      <!-- Footer -->
+      <div class="footer">
+
+        <div class="impressum">
+
+          <div class="data">
+            <h2>Impressum</h2>
+            <p>Inhaber: Stephan Klemmer  </p>
+            <p class="email">email@example.com</p>
+            <p class="phone">+4911111111111</p>
+            <p class="disclaimer">
+              Haftungshinweis:
+Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+            </p>
+
+          </div>
+          <hr>
+
+          <p class="copyright">
+            &copy Copyright 2016. Stephan Klemmer - All rights reserved
+          </p>
+        </div>
 
         <div class="social-icons">
           <a href="#"><img src="/img/facebook.png" alt=""></a>
           <a href="#"><img src="/img/twitter.png" alt=""></a>
         </div>
+
       </div>
+
     </div>
+
+
 
   </div>
 
@@ -155,7 +186,7 @@
   // Close the menu after selecting a menu item
   for(var i = 0; i < menuItems.length; i++) {
     menuItems[i].addEventListener('click', function closeMenu() {
-      toggleMenu();
+      // toggleMenu();
     })
   }
 
